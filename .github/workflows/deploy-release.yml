@@ -1,0 +1,34 @@
+name: Deploy release to dev
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout release
+        uses: actions/checkout@v4
+
+      - name: Deploy via FTPS
+        uses: step-security/ftp-deploy-action@v4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+
+          protocol: ftps
+          port: 21
+
+          local-dir: ./
+          server-dir: ./hhs/portfolio-wpfw/
+
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
