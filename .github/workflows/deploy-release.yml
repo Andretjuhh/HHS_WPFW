@@ -28,8 +28,6 @@ jobs:
           local-dir: ./
           server-dir: ./hhs/portfolio-wpfw/
 
-          dry-run: true
-
           exclude: |
             **/.git*
             **/.git*/**
