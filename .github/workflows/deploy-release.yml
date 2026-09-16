@@ -13,10 +13,10 @@ jobs:
 
     steps:
       - name: Checkout release
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Deploy via FTPS
-        uses: step-security/ftp-deploy-action@v4
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
