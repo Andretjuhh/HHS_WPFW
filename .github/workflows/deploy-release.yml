@@ -24,6 +24,7 @@ jobs:
 
           protocol: ftps
           port: 21
+          timeout: 60000
 
           local-dir: ./
           server-dir: ./hhs/portfolio-wpfw/
