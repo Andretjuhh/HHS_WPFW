@@ -1,0 +1,89 @@
+.hero {
+  width: 100%;
+  background: black;
+  color: white;
+  align-content: center;
+}
+
+.intro {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 96px 24px;
+  text-align: center;
+}
+
+.intro h1 {
+  margin: 0 0 8px;
+}
+
+.intro h2 {
+  margin: 0 0 24px;
+  color: #a1a1a6;
+}
+
+.intro p {
+  margin: 0 0 32px;
+  color: #d2d2d7;
+  line-height: 1.6;
+}
+
+.projects-btn {
+  display: inline-block;
+  padding: 12px 22px;
+
+  background: white;
+  color: black;
+
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.hobbies {
+  padding: 96px 0;
+}
+
+.hobbies h2 {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.hobby-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.hobby {
+  padding: 32px;
+  background: var(--bg-soft);
+  border-radius: var(--radius);
+}
+
+.hobby h3 {
+  margin-top: 0;
+}
+
+.hobby p {
+  margin-bottom: 0;
+}
+@media (max-width: 700px) {
+  .hobby-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.github {
+  padding: 64px 0;
+  background: var(--bg-soft);
+  text-align: center;
+}
+
+.github h2 {
+  margin: 0 0 16px;
+
+  font-size: 2rem;
+}
+
+.github p {
+  margin: 8px 0;
+  color: var(--text-secondary);
+}

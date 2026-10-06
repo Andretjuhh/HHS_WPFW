@@ -1,0 +1,13 @@
+/* Defaults en misc*/
+@import url(./global/default.css);
+@import url(./misc/typography.css);
+/* layout */
+@import url(./layout/navigations.css);
+@import url(./layout/footer.css);
+@import url(./layout/header.css);
+
+/* Paginas */
+@import url(./pages/home.css);
+@import url(./pages/projects.css);
+@import url(./pages/blog.css);
+@import url(./pages/contact.css);

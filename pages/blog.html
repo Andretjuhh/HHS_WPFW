@@ -1,9 +1,96 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog</title>
+    <link rel="stylesheet" href="../css/main.css" />
+
+    <title>Blog - Andre</title>
   </head>
-  <body></body>
+
+  <body>
+    <header>
+      <div class="container">
+        <nav class="nav-bar">
+          <img
+            class="nav-logo"
+            src="../assets/icons/ApplePF.png"
+            alt="Andretjuhh logo"
+          />
+
+          <a href="../index.html">Home</a>
+          <a href="./projects.html">Projecten</a>
+          <a href="./blog.html" activePage="page">Blog</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="blog-intro">
+        <div class="container">
+          <h1>Blog.</h1>
+
+          <p>
+            Gedachten over development, projecten, technologie en dingen die ik
+            onderweg leer.
+          </p>
+        </div>
+      </section>
+
+      <section class="blog">
+        <div class="container blog-list">
+          <article class="blog-post">
+            <p class="blog-date">5 oktober 2026</p>
+
+            <h2>Blog post test</h2>
+
+            <p class="blog-preview">Dit is een blog post test.</p>
+
+            <button
+              class="read-more"
+              type="button"
+              aria-expanded="false"
+              aria-controls="blog-test-1"
+            >
+              Lees meer
+            </button>
+
+            <div class="blog-content" id="blog-test-1" hidden>
+              <p>Dit is een blog post test.</p>
+            </div>
+          </article>
+
+          <article class="blog-post">
+            <p class="blog-date">5 oktober 2026</p>
+
+            <h2>Blog post test</h2>
+
+            <p class="blog-preview">Dit is een blog post test.</p>
+
+            <button
+              class="read-more"
+              type="button"
+              aria-expanded="false"
+              aria-controls="blog-test-2"
+            >
+              Lees meer
+            </button>
+
+            <div class="blog-content" id="blog-test-2" hidden>
+              <p>Dit is een blog post test.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <p>© 2026 André Silva dos Reis · dev.andretjuhh.nl</p>
+      </div>
+    </footer>
+
+    <script src="../js/pages/blog.js"></script>
+  </body>
 </html>

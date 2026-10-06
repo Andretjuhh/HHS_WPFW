@@ -1,9 +1,107 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact</title>
+
+    <link rel="stylesheet" href="../css/main.css" />
+
+    <title>Contact - Andre</title>
   </head>
-  <body></body>
+
+  <body>
+    <header>
+      <div class="container">
+        <nav class="nav-bar">
+          <img
+            class="nav-logo"
+            src="../assets/icons/ApplePF.png"
+            alt="Andretjuhh logo"
+          />
+
+          <a href="../index.html">Home</a>
+          <a href="./projects.html">Projecten</a>
+          <a href="./blog.html">Blog</a>
+          <a href="./contact.html" activePage="page">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="contact-intro">
+        <div class="container">
+          <h1>Contact.</h1>
+
+          <p>
+            Heb je een vraag, wil je samenwerken of gewoon iets sturen? Laat
+            hieronder een bericht achter.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div class="container">
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-field">
+              <label for="name">Naam</label>
+
+              <input
+                type="text"
+                id="name"
+                name="name"
+                aria-describedby="name-error"
+              />
+
+              <p class="form-error" id="name-error"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="email">E-mail</label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                aria-describedby="email-error"
+              />
+
+              <p class="form-error" id="email-error"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="message">Bericht</label>
+
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                aria-describedby="message-error"
+              ></textarea>
+
+              <p class="form-error" id="message-error"></p>
+            </div>
+
+            <button class="send-btn" type="submit">Verstuur bericht</button>
+
+            <p class="form-success" id="form-success" role="status"></p>
+          </form>
+
+          <p class="direct-mail">
+            Of mail mij direct via
+            <a href="mailto:22126864@student.hhs.nl">
+              22126864@student.hhs.nl
+            </a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <p>© 2026 André Silva dos Reis · dev.andretjuhh.nl</p>
+      </div>
+    </footer>
+
+    <script src="../js/pages/contact.js"></script>
+  </body>
 </html>

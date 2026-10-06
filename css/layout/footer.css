@@ -1,0 +1,19 @@
+.footer {
+  width: 100%;
+  background-color: #f5f5f7;
+}
+
+.footer-content {
+  min-height: 80px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer p {
+  margin: 0;
+  color: #6e6e73;
+  font-size: 0.8rem;
+  text-align: center;
+}

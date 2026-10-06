@@ -1,9 +1,74 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>projects</title>
+
+    <link rel="stylesheet" href="../css/main.css" />
+
+    <title>Projects - Andre</title>
   </head>
-  <body></body>
+
+  <body>
+    <header>
+      <div class="container">
+        <nav class="nav-bar">
+          <img
+            class="nav-logo"
+            src="../assets/icons/ApplePF.png"
+            alt="Andretjuhh logo"
+          />
+
+          <a href="../index.html">Home</a>
+          <a href="./projects.html" activePage="page">Projecten</a>
+          <a href="./blog.html">Blog</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="projects-intro">
+        <div class="container">
+          <h1>Projects.</h1>
+
+          <p>
+            Een overzicht van projecten waar ik aan heb gewerkt en de
+            technologieën die ik daarbij heb gebruikt.
+          </p>
+        </div>
+      </section>
+
+      <section class="projects">
+        <div class="container">
+          <div class="project-filter">
+            <button type="button" data-filter="all" aria-pressed="true">
+              Alles
+            </button>
+
+            <button type="button" data-filter="web">Web</button>
+
+            <button type="button" data-filter="app">Apps</button>
+
+            <button type="button" data-filter="other">Overig</button>
+          </div>
+
+          <div class="project-grid" id="project-list" aria-live="polite"></div>
+
+          <p class="no-projects" id="no-projects" hidden>
+            Geen projecten gevonden.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <p>© 2026 André Silva dos Reis · dev.andretjuhh.nl</p>
+      </div>
+    </footer>
+
+    <script src="../data/projects.js"></script>
+    <script src="../js/pages/projects.js"></script>
+  </body>
 </html>

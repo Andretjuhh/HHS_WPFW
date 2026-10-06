@@ -1,0 +1,155 @@
+.contact-intro {
+  width: 100%;
+
+  background: black;
+  color: white;
+}
+
+.contact-intro .container {
+  padding-top: 96px;
+  padding-bottom: 96px;
+
+  text-align: center;
+}
+
+.contact-intro h1 {
+  margin: 0 0 16px;
+
+  font-size: clamp(3rem, 7vw, 6rem);
+  letter-spacing: -0.05em;
+}
+
+.contact-intro p {
+  max-width: 650px;
+  margin: 0 auto;
+
+  color: #d2d2d7;
+
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.contact {
+  padding: 96px 0;
+}
+
+.contact-form {
+  max-width: 650px;
+  margin: 0 auto;
+
+  padding: 40px;
+
+  background: var(--bg-soft);
+
+  border-radius: 24px;
+}
+
+.form-field {
+  margin-bottom: 24px;
+}
+
+.form-field label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-weight: 500;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+  padding: 14px 16px;
+
+  background: white;
+  color: var(--text);
+
+  border: 1px solid var(--border);
+  border-radius: 12px;
+
+  font: inherit;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: 2px solid black;
+  outline-offset: 2px;
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.form-error {
+  min-height: 1rem;
+
+  margin: 6px 0 0;
+
+  color: #d70015;
+
+  font-size: 0.85rem;
+}
+
+.form-field input[aria-invalid="true"],
+.form-field textarea[aria-invalid="true"] {
+  border-color: #d70015;
+}
+
+.send-btn {
+  padding: 12px 24px;
+
+  background: black;
+  color: white;
+
+  border: 0;
+  border-radius: 999px;
+
+  font-size: 0.95rem;
+
+  cursor: pointer;
+}
+
+.send-btn:hover {
+  opacity: 0.75;
+}
+
+.form-success {
+  margin: 20px 0 0;
+
+  font-weight: 500;
+}
+
+.direct-mail {
+  margin: 32px auto 0;
+
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.direct-mail a {
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .contact-intro .container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-intro .container {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .contact {
+    padding: 64px 0;
+  }
+
+  .contact-form {
+    padding: 24px;
+  }
+}
