@@ -1,24 +1,31 @@
-const filterButtons = document.querySelectorAll(".project-filter button");
+async function loadGitHub() {
+  const status = document.querySelector("#github-status");
+  const githubData = document.querySelector("#github-data");
 
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const filter = button.dataset.filter;
+  try {
+    const response = await fetch("https://api.github.com/users/Andretjuhh");
 
-    filterButtons.forEach((btn) => {
-      btn.setAttribute("aria-pressed", "false");
-    });
-
-    button.setAttribute("aria-pressed", "true");
-
-    if (filter === "all") {
-      renderProjects(projects);
-      return;
+    if (!response.ok) {
+      throw new Error("Git werkt niet");
     }
 
-    const filteredProjects = projects.filter((project) => {
-      return project.category === filter;
-    });
+    const data = await response.json();
 
-    renderProjects(filteredProjects);
-  });
-});
+    status.textContent = "";
+
+    const username = document.createElement("p");
+    username.textContent = `@${data.login}`;
+
+    const repos = document.createElement("p");
+    repos.textContent = `${data.public_repos} publieke repositories`;
+
+    githubData.appendChild(username);
+    githubData.appendChild(repos);
+  } catch (error) {
+    console.error(error);
+
+    status.textContent = "GitHub gegevens konden niet worden geladen.";
+  }
+}
+
+loadGitHub();
